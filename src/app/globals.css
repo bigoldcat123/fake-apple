@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Add your custom styles here.
 
+  You can use Tailwind's utility classes or write your own.
+
+  Here's an example of a custom class:
+  
+ */
 @layer components {
   .my-custom-style {
     background-color: aqua;
