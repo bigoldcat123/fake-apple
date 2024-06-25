@@ -19,7 +19,7 @@ export default async function RootLayout({
   const data = await getNavigationData()
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + ' bg-slate-50'}>
         <HomeNavigation data={data}></HomeNavigation>
         {children}
         <footer className=" h-96">
