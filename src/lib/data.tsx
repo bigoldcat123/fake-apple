@@ -808,89 +808,338 @@ export async function getGoodsImgs() {
 export async function getNewGoodsImgs() {
     const data = [
         {
-            category:'APPLE VISION PRO',
-            title:'现可接受预购',
-            des:'6月28日发售',
-            colorCategory:'gray',
-            color:'black',
-            imgLink:'/newGoods/vision.jpg'
-        },        {
-            category:'IPHONE 15 PRO',
-            title:'钛金属',
-            des:'RMB 7999 起',
-            colorCategory:'white',
-            color:'white',
-            imgLink:'/newGoods/iphone15pro.jpg'
-        },        {
-            category:'IPAD PRO',
-            title:'磅礴的薄',
-            des:'RMB 8999 起',
-            colorCategory:'white',
-            color:'white',
-            imgLink:'/newGoods/ipadpro.jpg'
-        },        {
-            category:'MACBOOK AIR',
-            title:'主打一个行动力',
-            des:'RMB 7999 起',
-            colorCategory:'gray',
-            color:'black',
-            imgLink:'/newGoods/macbookair.jpg'
-        },        {
-            category:'IPAD AIR',
-            title:'好轻新',
-            des:'RMB 4799 起',
-            colorCategory:'gray',
-            color:'black',
-            imgLink:'/newGoods/ipadair.jpg'
-        },        {
-            category:'APPLE PENCIL PRO',
-            title:'为创意一画开天',
-            des:'RMB 999',
-            colorCategory:'white',
-            color:'white',
-            imgLink:'/newGoods/pencil.jpg'
-        },        {
-            category:'彩虹版编织单圈表带',
-            title:'心有光彩自飞扬',
-            des:'RMB 779',
-            colorCategory:'white',
-            color:'white',
-            imgLink:'/newGoods/strap.jpg'
-        },        {
-            category:'APPLE WATCH SERIES 9',
-            title:'智能加成,加亮加实力。',
-            des:'RMB 2999 起',
-            colorCategory:'white',
-            color:'white',
-            imgLink:'/newGoods/iwatch.jpg'
-        },        {
-            category:'IPHONE 15',
-            title:'开新的,超开心。',
-            des:'RMB 5999 起',
-            colorCategory:'gray',
-            color:'black',
-            imgLink:'/newGoods/iphone15.jpg'
-        },        {
-            category:'APPLE WATCH ULTRA 2',
-            title:'野出新维度',
-            des:'RMB 6499 起',
-            colorCategory:'gray',
-            color:'black',
-            imgLink:'/newGoods/iwatchultra.jpg'
-        },        {
-            category:'MACBOOK PRO',
-            title:'狠角色,很绝色。',
-            des:'RMB 12,999 起',
-            colorCategory:'gray',
-            color:'black',
-            imgLink:'/newGoods/macbookpro.jpg'
-        },        {
-            category:'APPLE WATCH SE',
-            title:'好赞好入手',
-            des:'RMB 1999 起',
-            colorCategory:'gray',
-            color:'black',
-            imgLink:'/newGoods/iwatchse.jpg'
+            category: 'APPLE VISION PRO',
+            title: '现可接受预购',
+            des: '6月28日发售',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/newGoods/vision.jpg'
+        }, {
+            category: 'IPHONE 15 PRO',
+            title: '钛金属',
+            des: 'RMB 7999 起',
+            colorCategory: 'white',
+            color: 'white',
+            imgLink: '/newGoods/iphone15pro.jpg'
+        }, {
+            category: 'IPAD PRO',
+            title: '磅礴的薄',
+            des: 'RMB 8999 起',
+            colorCategory: 'white',
+            color: 'white',
+            imgLink: '/newGoods/ipadpro.jpg'
+        }, {
+            category: 'MACBOOK AIR',
+            title: '主打一个行动力',
+            des: 'RMB 7999 起',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/newGoods/macbookair.jpg'
+        }, {
+            category: 'IPAD AIR',
+            title: '好轻新',
+            des: 'RMB 4799 起',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/newGoods/ipadair.jpg'
+        }, {
+            category: 'APPLE PENCIL PRO',
+            title: '为创意一画开天',
+            des: 'RMB 999',
+            colorCategory: 'white',
+            color: 'white',
+            imgLink: '/newGoods/pencil.jpg'
+        }, {
+            category: '彩虹版编织单圈表带',
+            title: '心有光彩自飞扬',
+            des: 'RMB 779',
+            colorCategory: 'white',
+            color: 'white',
+            imgLink: '/newGoods/strap.jpg'
+        }, {
+            category: 'APPLE WATCH SERIES 9',
+            title: '智能加成,加亮加实力。',
+            des: 'RMB 2999 起',
+            colorCategory: 'white',
+            color: 'white',
+            imgLink: '/newGoods/iwatch.jpg'
+        }, {
+            category: 'IPHONE 15',
+            title: '开新的,超开心。',
+            des: 'RMB 5999 起',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/newGoods/iphone15.jpg'
+        }, {
+            category: 'APPLE WATCH ULTRA 2',
+            title: '野出新维度',
+            des: 'RMB 6499 起',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/newGoods/iwatchultra.jpg'
+        }, {
+            category: 'MACBOOK PRO',
+            title: '狠角色,很绝色。',
+            des: 'RMB 12,999 起',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/newGoods/macbookpro.jpg'
+        }, {
+            category: 'APPLE WATCH SE',
+            title: '好赞好入手',
+            des: 'RMB 1999 起',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/newGoods/iwatchse.jpg'
+        }
+    ]
+    return data
+}
+
+export async function getAttachmentGoods() {
+    const data = [{
+        title: '45 毫米彩虹版编制单圈表带 - 6 号',
+        _new: '新款',
+        price: 'RMB 779',
+        imgLink: '/attachment/strap.jpg',
+        hueLinks: [
+            '/attachment/hue/strap/1.jpg',
+        ]
+    },
+    {
+        title: 'Apple Pencile Pro',
+        _new: '新款',
+        price: 'RMB 999',
+        imgLink: '/attachment/pencil.jpg',
+        hueLinks: [
+            
+        ]
+    },
+    {
+        title: '妙控键盘 - 适用于 13 英寸 iPad Pro (M4) - 中文 (拼音) - 黑色',
+        _new: '新款',
+        price: 'RMB 2,799',
+        imgLink: '/attachment/keyboard.jpg',
+        hueLinks: [
+            '/attachment/hue/keyboard/1.jpg',
+            '/attachment/hue/keyboard/2.jpg',
+        ]
+    },
+    {
+        title: 'iPhone 15 Pro 专用 MagSafe 精织斜纹保护壳 - 冬青色',
+        _new: '',
+        price: 'RMB 479',
+        imgLink: '/attachment/cover.jpg',
+        hueLinks: [
+            '/attachment/hue/cover/1.jpg',
+            '/attachment/hue/cover/2.jpg',
+            '/attachment/hue/cover/3.jpg',
+            '/attachment/hue/cover/4.jpg',
+            '/attachment/hue/cover/5.jpg',
+        ]
+    },{
+        title: 'iPhone 专用 MagSafe 精织斜纹卡包 - 海蓝色',
+        _new: '',
+        price: 'RMB 479',
+        imgLink: '/attachment/magsafe.jpg',
+        hueLinks: [
+            '/attachment/hue/magsafe/1.jpg',
+            '/attachment/hue/magsafe/2.jpg',
+            '/attachment/hue/magsafe/3.jpg',
+            '/attachment/hue/magsafe/4.jpg',
+            '/attachment/hue/magsafe/5.jpg',
+        ]
+    },
+    {
+        title: '45 毫米淡薄荷色回环式运动表带',
+        _new: '',
+        price: 'RMB 379',
+        imgLink: '/attachment/strap2.jpg',
+        hueLinks: [
+            '/attachment/hue/strap2/1.jpg',
+            '/attachment/hue/strap2/2.jpg',
+            '/attachment/hue/strap2/3.jpg',
+            '/attachment/hue/strap2/4.jpg',
+            '/attachment/hue/strap2/5.jpg',
+            '/attachment/hue/strap2/6.jpg'
+        ]
+    },
+    {
+        title: 'iPhone 15 专用 MagSafe 硅胶保护壳 - 浅蓝色',
+        _new: '',
+        price: 'RMB 399',
+        imgLink: '/attachment/MagSafecover.jpg',
+        hueLinks: [
+            '/attachment/hue/MagSafecover/1.jpg',
+            '/attachment/hue/MagSafecover/2.jpg',
+            '/attachment/hue/MagSafecover/3.jpg',
+            '/attachment/hue/MagSafecover/4.jpg',
+            '/attachment/hue/MagSafecover/5.jpg',
+        ]
+    },
+    {
+        title: '45 毫米彩虹版编制单圈表带 - 6 号',
+        _new: '',
+        price: 'RMB 779',
+        imgLink: '/attachment/strap.jpg',
+        hueLinks: [
+            '/attachment/hue/strap/1.jpg',
+        ]
+    },
+    {
+        title: 'Tech21 EvoArt 保护壳 (适用于 AirPods Max)',
+        _new: '',
+        price: 'RMB 328',
+        imgLink: '/attachment/AirPodscover.jpg',
+        hueLinks: [
+            '/attachment/hue/AirPodscover/1.jpg',
+            '/attachment/hue/AirPodscover/2.jpg',
+        ]
+    }
+]
+    return data
+}
+export async function getMusciGoods() {
+    const data = [{
+        title: 'AirPods Pro (第二代) - 配 MagSafe 充电盒 (USB‑C)',
+        _new: '免费镌刻服务',
+        price: 'RMB 779',
+        imgLink: '/music/airpodspro.jpg',
+        hueLinks: [
+            // '/attachment/hue/strap/1.jpg',
+        ]
+    },
+    {
+        title: 'HomePod - 午夜色',
+        _new: '新款',
+        price: 'RMB 999',
+        imgLink: '/music/homepod.jpg',
+        hueLinks: [
+            
+        ]
+    },
+    {
+        title: 'AirPods Max - 银色',
+        _new: '免费镌刻服务',
+        price: 'RMB 2,799',
+        imgLink: '/music/airpods-max.jpg',
+        hueLinks: [
+            '/attachment/hue/keyboard/1.jpg',
+            '/attachment/hue/keyboard/2.jpg',
+        ]
+    },
+    {
+        title: 'HomePod mini - 黄色',
+        _new: '',
+        price: 'RMB 479',
+        imgLink: '/music/homepod-mini.jpg',
+        hueLinks: [
+            '/attachment/hue/cover/1.jpg',
+            '/attachment/hue/cover/2.jpg',
+            '/attachment/hue/cover/3.jpg',
+            '/attachment/hue/cover/4.jpg',
+            '/attachment/hue/cover/5.jpg',
+        ]
+    },{
+        title: 'Beats Solo 4 — 无线头戴式耳机 – 云彩粉',
+        _new: '',
+        price: 'RMB 479',
+        imgLink: '/music/pink.jpg',
+        hueLinks: [
+            '/attachment/hue/magsafe/1.jpg',
+            '/attachment/hue/magsafe/2.jpg',
+            '/attachment/hue/magsafe/3.jpg',
+            '/attachment/hue/magsafe/4.jpg',
+            '/attachment/hue/magsafe/5.jpg',
+        ]
+    },
+    {
+        title: 'AirPods (第三代) - 配闪电充电盒',
+        _new: '免费镌刻服务',
+        price: 'RMB 379',
+        imgLink: '/music/apipods.jpg',
+        hueLinks: [
+        ]
+    },
+    {
+        title: 'Beats Solo Buds - 真无线耳机 - 晶透红',
+        _new: '新款',
+        price: 'RMB 399',
+        imgLink: '/music/red.jpg',
+        hueLinks: [
+            '/attachment/hue/MagSafecover/1.jpg',
+            '/attachment/hue/MagSafecover/2.jpg',
+            '/attachment/hue/MagSafecover/3.jpg',
+            '/attachment/hue/MagSafecover/4.jpg',
+            '/attachment/hue/MagSafecover/5.jpg',
+        ]
+    }
+]
+    return data
+}
+
+export async function getInfomation() {
+    const data = [
+        {
+            category: 'ICLOUD+',
+            title: '激活新 iPad 或 iPhone，免⁠费⁠试⁠用 6 个月 iCloud+ 轻⁠松⁠备⁠份^。  ',
+            des: '',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/information/icloud.jpg'
+        },
+        {
+            category: '',
+            title: '周全保护有保障。   ',
+            des: 'AppleCare+ 服务计划现可提供不限次数的意外损坏保修服务。',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/information/care.jpg'
+        },
+        {
+            category: '',
+            title: '探索 Apple Pay 的各种用‍法‍。',
+            des: '',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/information/applepay.jpg'
+        },{
+            category: '家庭',
+            title: '看看一个 app 如何掌控你的整个家。',
+            des: '',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/information/home.jpg'
+        }
+    ]
+    return data
+}
+
+export async function getSpecialShops() {
+    const data = [
+        {
+            category: '教育',
+            title: '以教育优惠购买新 iPad 或 Mac，省更多',
+            des: '',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/specialshop/education.jpg'
+        },
+        {
+            category: '商务',
+            title: '从大公司到小企业，我们都能助你一臂之力',
+            des: '',
+            colorCategory: 'gray',
+            color: 'white',
+            imgLink: '/specialshop/business.jpg'
+        },
+        {
+            category: '认证的翻新产品',
+            title: '选购 Apple 翻新产‍品‍，享‍受一年保修服务。',
+            des: '',
+            colorCategory: 'gray',
+            color: 'black',
+            imgLink: '/specialshop/renew.jpg'
         }
     ]
     return data

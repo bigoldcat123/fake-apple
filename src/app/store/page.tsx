@@ -1,12 +1,17 @@
-import { getNewGoodsImgs } from "@/lib/data";
+import { getAttachmentGoods, getInfomation, getMusciGoods, getNewGoodsImgs, getSpecialShops } from "@/lib/data";
 import Shelf from "@/ui/common/Shelf";
 import ShelfFinal from "@/ui/common/ShelfFinal";
 import ShelfV2 from "@/ui/common/ShelfV2";
 import FeatureCard from "@/ui/common/shop/FeatureCard";
+import GoodCard from "@/ui/common/shop/GoodCard";
 import NewGoodCard from "@/ui/common/shop/NewGoodCard";
 
 export default async function Store() {
     const data = await getNewGoodsImgs()
+    const attachments = await getAttachmentGoods()
+    const musciGoods = await getMusciGoods()
+    const information = await getInfomation()
+    const specialshops = await getSpecialShops()
     return (
         <>
             <div className=" mt-16 mb-8 px-5 md:px-24 w-full justify-between flex flex-row">
@@ -146,16 +151,19 @@ export default async function Store() {
             <ShelfFinal first="配件。" secend="款款必备，和你的设备绝配。" FclassName={' h-[34.25rem]'} CclassName={' h-[35.25rem]'} RclassName={'h-[31.25rem]'}>
                 <div className=" cursor-pointer snap-center snap-always flex-shrink-0 flex items-center">
                     <div className={`h-[31.25rem]  w-full`}>
-                        <div style={{backgroundImage:'url(/attachment/first.jpg)'}} className={` w-[25rem]  shadow-md  hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-in-out  space-y-2 h-full  bg-cover rounded-3xl p-8`} >
-                           <p className="text-2xl font-bold">尝尝鲜</p>
-                           <p>探索常用配件的各式新配色和新功能。</p>
+                        <div style={{ backgroundImage: 'url(/attachment/first.jpg)' }} className={` w-[25rem]  shadow-md  hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-in-out  space-y-2 h-full  bg-cover rounded-3xl p-8`} >
+                            <p className="text-2xl font-bold">尝尝鲜</p>
+                            <p>探索常用配件的各式新配色和新功能。</p>
                         </div>
                     </div>
                 </div>
+                {attachments.map((x, i) => {
+                    return <GoodCard key={i} card={x}></GoodCard>
+                })}
                 <div className=" cursor-pointer snap-center snap-always flex-shrink-0 flex items-center">
                     <div className={`h-[31.25rem]  w-full`}>
-                        <div style={{backgroundImage:'url(/attachment/last.jpg)'}} className={` w-[25rem]  shadow-md  hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-in-out  space-y-2 h-full  bg-cover rounded-3xl p-8`} >
-                           <p className="text-2xl font-bold">探索所有配件。</p>
+                        <div style={{ backgroundImage: 'url(/attachment/last.jpg)' }} className={` w-[25rem]  shadow-md  hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-in-out  space-y-2 h-full  bg-cover rounded-3xl p-8`} >
+                            <p className="text-2xl font-bold">探索所有配件。</p>
                         </div>
                     </div>
                 </div>
@@ -164,12 +172,27 @@ export default async function Store() {
             <ShelfFinal first="声声动听。 " secend="音质丰富饱满，个个都悦耳。" FclassName={' h-[34.25rem]'} CclassName={' h-[35.25rem]'} RclassName={'h-[31.25rem]'}>
                 <div className=" cursor-pointer snap-center snap-always flex-shrink-0 flex items-center">
                     <div className={`h-[31.25rem]  w-full`}>
-                        <div style={{backgroundImage:'url(/music/first.jpg)'}} className={` w-[25rem]  shadow-md  hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-in-out  space-y-2 h-full  bg-cover rounded-3xl p-8`} >
-                           <p className="text-2xl font-bold pr-20">Apple Music 免费试听六个月</p>
-                           <p>购买 iPhone、HomePod、AirPods 或指定 Beats 产品，即可享此福利⁺。</p>
+                        <div style={{ backgroundImage: 'url(/music/first.jpg)' }} className={` w-[25rem]  shadow-md  hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-in-out  space-y-2 h-full  bg-cover rounded-3xl p-8`} >
+                            <p className="text-2xl font-bold pr-20">Apple Music 免费试听六个月</p>
+                            <p>购买 iPhone、HomePod、AirPods 或指定 Beats 产品，即可享此福利⁺。</p>
                         </div>
                     </div>
                 </div>
+                {musciGoods.map((x, i) => {
+                    return <GoodCard key={i} card={x}></GoodCard>
+                })}
+            </ShelfFinal>
+            <div className=" h-8"></div>
+            <ShelfFinal first="全方位 Apple 体验。" secend="让 Apple 产品和服务助你大显身手。" FclassName={' h-[34.25rem]'} CclassName={' h-[35.25rem]'} RclassName={'h-[31.25rem]'}>
+                {information.map((x,i) => {
+                    return <NewGoodCard key={i} widthClass=" w-[30rem] " heightClass="h-[31.25rem]" card={x}></NewGoodCard>
+                })}
+            </ShelfFinal>
+            <div className=" h-8"></div>
+            <ShelfFinal first="专属商店。" secend="为教育、商务等提供专享优惠。" FclassName={' h-[34.25rem]'} CclassName={' h-[35.25rem]'} RclassName={'h-[31.25rem]'}>
+            {specialshops.map((x, i) => {
+                    return <NewGoodCard widthClass="w-[25rem]" heightClass='h-[31.25rem]' key={i} card={x}></NewGoodCard>
+                })}
             </ShelfFinal>
         </>
     )
