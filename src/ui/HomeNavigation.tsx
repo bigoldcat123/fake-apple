@@ -60,7 +60,7 @@ export default function HomeNavigation({data} : {data:{
                     </Link>
                     </div>
                     <div className=" cursor-pointer" onClick={() => {hideBanner(0)}} onMouseEnter={(e) => showBanner(0)}><Link href={'/store'}>商店</Link></div>
-                    <div className=" cursor-pointer" onClick={() => {hideBanner(0)}} onMouseEnter={(e) => showBanner(1)}>Mac</div>
+                    <div className=" cursor-pointer" onClick={() => {hideBanner(0)}} onMouseEnter={(e) => showBanner(1)}><Link href={'/mac'}>Mac</Link></div>
                     <div className=" cursor-pointer" onClick={() => {hideBanner(0)}} onMouseEnter={(e) => showBanner(2)}>iPad</div>
                     <div className=" cursor-pointer" onClick={() => {hideBanner(0)}} onMouseEnter={(e) => showBanner(3)}>iPhone</div>
                     <div className=" cursor-pointer" onClick={() => {hideBanner(0)}} onMouseEnter={(e) => showBanner(4)}>Watch</div>

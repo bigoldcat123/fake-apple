@@ -912,7 +912,7 @@ export async function getAttachmentGoods() {
         price: 'RMB 999',
         imgLink: '/attachment/pencil.jpg',
         hueLinks: [
-            
+
         ]
     },
     {
@@ -937,7 +937,7 @@ export async function getAttachmentGoods() {
             '/attachment/hue/cover/4.jpg',
             '/attachment/hue/cover/5.jpg',
         ]
-    },{
+    }, {
         title: 'iPhone 专用 MagSafe 精织斜纹卡包 - 海蓝色',
         _new: '',
         price: 'RMB 479',
@@ -996,7 +996,7 @@ export async function getAttachmentGoods() {
             '/attachment/hue/AirPodscover/2.jpg',
         ]
     }
-]
+    ]
     return data
 }
 export async function getMusciGoods() {
@@ -1015,7 +1015,7 @@ export async function getMusciGoods() {
         price: 'RMB 999',
         imgLink: '/music/homepod.jpg',
         hueLinks: [
-            
+
         ]
     },
     {
@@ -1040,7 +1040,7 @@ export async function getMusciGoods() {
             '/attachment/hue/cover/4.jpg',
             '/attachment/hue/cover/5.jpg',
         ]
-    },{
+    }, {
         title: 'Beats Solo 4 — 无线头戴式耳机 – 云彩粉',
         _new: '',
         price: 'RMB 479',
@@ -1074,7 +1074,7 @@ export async function getMusciGoods() {
             '/attachment/hue/MagSafecover/5.jpg',
         ]
     }
-]
+    ]
     return data
 }
 
@@ -1103,7 +1103,7 @@ export async function getInfomation() {
             colorCategory: 'gray',
             color: 'black',
             imgLink: '/information/applepay.jpg'
-        },{
+        }, {
             category: '家庭',
             title: '看看一个 app 如何掌控你的整个家。',
             des: '',
@@ -1141,6 +1141,124 @@ export async function getSpecialShops() {
             color: 'black',
             imgLink: '/specialshop/renew.jpg'
         }
+    ]
+    return data
+}
+
+export async function getMacs() {
+    const data = [
+
+        [{
+            "image": "/shop/mac/mbp.jpg",
+            'hue':[ '/attachment/hue/cover/1.jpg',
+                '/attachment/hue/cover/2.jpg',
+                '/attachment/hue/cover/3.jpg',
+                '/attachment/hue/cover/4.jpg',
+                '/attachment/hue/cover/5.jpg',],
+            "name": "MacBook Pro",
+            "secondName":"14 英寸和 16 英寸",
+             
+            "chips":'M3、M3 Pro 或 M3 Max 芯片',
+            "des": [
+                '超先进的 Mac 笔电，',
+                '艰巨任务巨拿手。'
+            ],
+            "price": 'RMB 542/月起或 RMB 12,999 起*'
+        },
+        {
+            "image": "/shop/mac/mba.jpg",
+            'hue':[ '/attachment/hue/cover/1.jpg',
+                '/attachment/hue/cover/2.jpg',
+                '/attachment/hue/cover/3.jpg',
+                '/attachment/hue/cover/4.jpg',
+                '/attachment/hue/cover/5.jpg',],
+            "name": "MacBook Air",
+            "secondName":"13 英寸和 15 英寸",
+             
+            "chips":'M2 或 M3 芯片',
+            "des": [
+                '超薄超快超便携，',
+                '玩转工作创作和娱乐。'
+            ],
+            "price":"RMB 333/月起或 RMB 7999 起*"
+        }],
+        [{
+            "image": "/shop/mac/imac.jpg",
+            'hue':[ '/attachment/hue/cover/1.jpg',
+                '/attachment/hue/cover/2.jpg',
+                '/attachment/hue/cover/3.jpg',
+                '/attachment/hue/cover/4.jpg',
+                '/attachment/hue/cover/5.jpg',],
+            "name": "iMac",
+            "secondName":"",
+             
+            "chips":'M2 或 M2 Pro 芯片',
+            "des": [
+                '出色的一体机，',
+                '创作和工作都出彩。'
+            ],
+            "price":"RMB 458/月起或 RMB 10,999 起*"
+        },
+        {
+            "image": "/shop/mac/macmini.jpg",
+            'hue':[],
+            "name": "Mac mini",
+            "secondName":"",
+            "chips":'M2 或 M2 Pro 芯片',
+            "des": [
+                '超值的 Mac 台式机，',
+                '实力不容小看。'
+            ],
+            "price":"RMB 187/月起或 RMB 4499 起*"
+        },
+        {
+            "image": "/shop/mac/macstudio.jpg",
+            'hue':[],
+            "name": "Mac Studio",
+            "secondName":"",
+            "chips":'M2 Max 或 M2 Ultra 芯片',
+            "des": [
+                '性能强端口多，',
+                '专业各种对口。'
+            ],
+            "price":"RMB 687/月起或 RMB 16,499 起*"
+        },
+        {
+            "image": "/shop/mac/macpro.jpg",
+            'hue':[],
+            "name": "Mac Pro",
+            "secondName":"",
+            "chips":'M2 Ultra 芯片',
+            "des": [
+                '可 PCIe 扩展的专业工作站，',
+                '专攻重大任务。'
+            ],
+            "price":"RMB 2,333/月起或 RMB 55,999 起*"
+        },],
+        [{
+            "image": "/shop/mac/display.jpg",
+            'hue':[],
+            "name": "Studio Display",
+            "secondName":"",
+            "chips":'M2 Ultra 芯片',
+            "des": [
+                '5K 视网膜显示屏，',
+                '联手惊艳的摄像头和音响。'
+            ],
+            "price":"RMB 479/月起或 RMB 11,499 起*"
+        },
+        {
+            "image": "/shop/mac/displayxdr.jpg",
+            'hue':[],
+            "name": "Pro Display XDR",
+            "secondName":"",
+            "chips":'M2 Ultra 芯片',
+            "des": [
+                '先进的 6K XDR 显示屏，',
+                '专为专业工作而设。'
+            ],
+            "price":"RMB 1,667/月起或 RMB 39,999 起*"
+        }]
     ]
     return data
 }
