@@ -25,17 +25,14 @@
 
   .an-test2 {
 
-    animation: test2 0.5s ease ;
+    animation: test2 1s ease ;
   }
   @keyframes test {
     0% {
       opacity: 0;
       transform: translateX(100px);
     }
-    50% {
-      opacity: 0;
-      transform: translateX(100px);
-    }
+
     100%{
       transform: translateX(0px);
       opacity: 1;
