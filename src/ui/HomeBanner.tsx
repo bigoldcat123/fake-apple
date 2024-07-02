@@ -1,6 +1,6 @@
 export default function HomeBanner () {
     return (
-        <div className=" absolute text-center left-1/2 -translate-x-1/2 top-[75%] space-y-3 ">
+        <div className=" absolute text-center left-1/2 -translate-x-1/2 bottom-0 pb-16  space-y-3 ">
             <div className=" font-bold text-6xl">🍎Vision Pro</div>
             <div className="text-2xl">欢迎来到空间计算时代</div>
             <div className=" space-x-7">
