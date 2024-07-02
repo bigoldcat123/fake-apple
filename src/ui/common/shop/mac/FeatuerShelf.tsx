@@ -1,27 +1,39 @@
-export default function FeatureShelf({ children, childrenHeight }: {
-    children: React.ReactNode,
-    childrenHeight: string // 0rem
-}) {
+'use client'
 
+import { useRef } from "react"
+
+export default function FeatureShelf({ children, childrenHeight,information }: {
+    children: React.ReactNode,
+    childrenHeight: string // 0rem,
+    information?:string[]
+}) {
+    const container = useRef<HTMLDivElement>(null)
+    function moveBy (direction:number) {
+        if(container.current) {
+            container.current.scrollTo({ left: container.current.scrollLeft + Number.parseInt(childrenHeight.replace('rem', '')) * direction * 16, behavior: 'smooth' })
+        }
+    }
     return (
         <>
             <div >
-                <div className=" px-12">
-                    title
+                <div  className=" font-bold text-5xl px-12 space-y-3">
+                    {information?.map((x,i) => {
+                        return (
+                            <p key={i}>{x}</p>
+                        )
+                    })}
                 </div>
                 <div className={`overflow-hidden my-12`} style={{ height: childrenHeight }}>
-                    <div className=" flex space-x-2 overflow-auto">
+                    <div ref={container} className=" snap-x snap-mandatory flex space-x-5 overflow-x-auto overflow-y-hidden">
                         <div className="min-w-12"></div>
                         {children}
                     </div>
                 </div>
-                <div>
-                    <button>left </button>
-                    <button> right</button>
+                <div className=" flex justify-end pr-16 space-x-5">
+                    <button onClick={() => moveBy(-1)} className=" h-9 aspect-square rounded-full bg-slate-400 cursor-pointer" >《</button>
+                    <button onClick={() => moveBy(1)} className=" h-9 aspect-square rounded-full bg-slate-400 cursor-pointer"> 》</button>
                 </div>
-
             </div>
-
         </>
     )
 }

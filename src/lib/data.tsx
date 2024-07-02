@@ -1262,3 +1262,58 @@ export async function getMacs() {
     ]
     return data
 }
+
+export async function getMacFeatures () {
+
+    const data = [
+        {
+            "image": "/shop/mac/feature/1.png",
+            title:[
+                '分期付款方案任你选。',
+                ''
+            ],
+            information:'各种方便的分期付款方案，为你更添轻松。'
+        },
+        {
+            "image": "/shop/mac/feature/2.png",
+            title:[
+                'Apple Trade In',
+                '换购计划，帮你省一笔。'
+            ],
+            information:'用符合条件的设备换购新Mac,可享折抵享受优惠。'
+        },
+        {
+            "image": "/shop/mac/feature/3.png",
+            title:[
+                '可免费送货，',
+                '也可到店取货。'
+            ],
+            information:'免费送货服务，或前往Apple Store零售店取货。'
+        },
+        {
+            "image": "/shop/mac/feature/4.png",
+            title:[
+                'Mac定制',
+                ''
+            ],
+            information:'选择你想要的芯片、内存、存储容量，以及外观颜色。'
+        },
+        {
+            "image": "/shop/mac/feature/5.png",
+            title:[
+                'Specialist专家',
+                '一对一协助选购。'
+            ],
+            information:'无论在线或是在店内，我们都乐意为你提供协助。'
+        },
+        {
+            "image": "/shop/mac/feature/6.png",
+            title:[
+                '专属于你的购物体验。',
+                ''
+            ],
+            information:'更个性化的购物方式，尽在 Apple Store app。'
+        },
+    ]
+    return data
+}
