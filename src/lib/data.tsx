@@ -1317,3 +1317,70 @@ export async function getMacFeatures () {
     ]
     return data
 }
+
+export async function getAboutMac() {
+    const data =[{
+        title:'轻松上手',
+        message:[
+            '简简单单，',
+            '用起来就喜欢。'
+        ],
+        img:'/shop/mac/aboutMac/1.jpg',
+        color:'white'
+    },
+    {
+        title:'性能和电池续航',
+        message:[
+            '跑得快，跑得久。',
+            ''
+        ],
+        img:'/shop/mac/aboutMac/2.jpg',
+        color:'white'
+    },
+    {
+        title:'Mac和iPhone',
+        message:[
+           '梦幻好队友。',
+            ''
+        ],
+        img:'/shop/mac/aboutMac/3.jpg',
+        color:'black'
+    },
+    {
+        title:'兼容性',
+        message:[
+           '各种常用App,',
+            'Mac都能跑。'
+        ],
+        img:'/shop/mac/aboutMac/4.jpg',
+        color:'black'
+    },
+    {
+        title:'隐私和安全',
+        message:[
+           '你的私事，',
+            '只关你的事。'
+        ],
+        img:'/shop/mac/aboutMac/5.jpg',
+        color:'white'
+    },
+    {
+        title:'耐用性',
+        message:[
+           '精心打造，',
+            '经得起时间考验。'
+        ],
+        img:'/shop/mac/aboutMac/6.jpg',
+        color:'black'
+    },
+    {
+        title:'Apple价值观',
+        message:[
+           '我们的价值观，',
+            '处处有体现。'
+        ],
+        img:'/shop/mac/aboutMac/7.jpg',
+        color:'black'
+    }]
+    return data
+}
