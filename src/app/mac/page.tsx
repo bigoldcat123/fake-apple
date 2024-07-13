@@ -8,7 +8,7 @@ import Head from "@/ui/common/shop/mac/Head";
 import Shelf from "@/ui/common/shop/mac/Shelf";
 import Video from "@/ui/common/shop/mac/Video";
 import AboutMacCard from "@/ui/common/shop/mac/aboutMacCard";
-
+import parse from 'html-react-parser';
 export default async function Mac() {
     const data = await getMacFeatures()
     const macs = await getMacs()
@@ -30,11 +30,26 @@ export default async function Mac() {
                     })}
                 </FeatureShelf>
                 <AppleFriend></AppleFriend>
-            </div>
 
-            <div className=" h-72 bg-orange-300"></div>
-            {/* <div ref={item} className=" h-72 bg-violet-300">?</div> */}
-            <div className=" h-72 bg-yellow-300"></div>
+                <FeatureShelf childrenHeight={'38.75rem'} childrenWidth="241.15625rem" information={['Mac 左膀右臂。']}>
+                    <div className=" cursor-pointer overflow-hidden w-[41.15625rem] h-[38.75rem] bg-slate-50 rounded-2xl flex flex-col items-center pt-12 ">
+                        <p className=" font-bold text-2xl">Mac 配件</p>
+                        <p className="p-4">来看看键盘、鼠标等各种精彩配件。</p>
+                        <a className=" text-blue-400 text-lg mb-8" href="">选购 Mac 配件</a>
+                        <div className="h-[425px]">
+                            <img className=" h-[425px] object-cover" src="/shop/mac/handandleg/11.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div className=" cursor-pointer overflow-hidden w-[41.15625rem] h-[38.75rem] bg-stone-50 rounded-2xl flex flex-col items-center pt-12 ">
+                        <p className=" font-bold text-2xl">Mac 配件</p>
+                        <p className="p-4">来看看键盘、鼠标等各种精彩配件。</p>
+                        <a className=" text-blue-400 text-lg mb-8" href="">选购 Mac 配件</a>
+                        <div className="h-[425px]">
+                            <img className="  object-cover" src="/shop/mac/handandleg/22.jpg" alt="" />
+                        </div>
+                    </div>
+                </FeatureShelf>
+            </div>
         </div>
     )
 }
